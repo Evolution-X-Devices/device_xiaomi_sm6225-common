@@ -149,6 +149,10 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     libsuspend
 
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
