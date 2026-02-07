@@ -9,7 +9,8 @@
 #
 
 device.internal = 1
-
+device.wake = 1
 keyboard.layout = uinput-fpc
 keyboard.builtIn = 1
 keyboard.orientationAware = 1
+touch.gestureMode = spots

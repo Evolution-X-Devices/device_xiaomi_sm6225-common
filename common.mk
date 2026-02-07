@@ -286,7 +286,11 @@ PRODUCT_COPY_FILES += \
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/idc/,$(TARGET_COPY_OUT_VENDOR)/usr/idc) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout) \
+    $(LOCAL_PATH)/configs/idc/fts_ts.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/fts_ts.idc \
+    $(LOCAL_PATH)/configs/idc/Vendor_0000_Product_0000.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/Vendor_0000_Product_0000.idc \
+    $(LOCAL_PATH)/configs/keylayout/fts_ts.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/fts_ts.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_0000_Product_0000.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/Vendor_0000_Product_0000.kl
 endif
 
 # IFAA
