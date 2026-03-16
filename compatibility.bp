@@ -1,0 +1,8 @@
+// Correção de dependências para Telephony e IMS
+phony {
+    name: "QtiTelephonyCompat",
+}
+
+phony {
+    name: "CneApp.libvndfwk_detect_jni.qti_symlink",
+}

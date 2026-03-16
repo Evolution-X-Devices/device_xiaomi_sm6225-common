@@ -552,6 +552,8 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/common \
+    vendor/gapps/arm64 \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
     hardware/xiaomi \
@@ -681,3 +683,7 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink \
     firmware_wlanmdsp.mbn_symlink
+
+
+# Remove LatinIME to avoid libjni_latinimegoogle conflict with GApps
+PRODUCT_PACKAGES := $(filter-out LatinIME, $(PRODUCT_PACKAGES))
