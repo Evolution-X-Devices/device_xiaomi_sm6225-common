@@ -464,7 +464,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Device-specific settings
 $(call inherit-product, hardware/dolby/dolby.mk)
-$(call inherit-product, packages/apps/FastCharge/fastcharge.mk)
 PRODUCT_PACKAGES += \
     XiaomiParts \
     DolbyAtmos
