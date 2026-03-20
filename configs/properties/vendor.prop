@@ -2,8 +2,6 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
-persist.vendor.audio.ambisonic.auto.profile=false
-persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
 persist.vendor.audio.avs.afe_api_version=2
 persist.vendor.audio.fluence.speaker=true
@@ -36,7 +34,6 @@ vendor.audio.adm.buffering.ms=2
 vendor.audio.c2.preferred=true
 vendor.audio.compress_capture.aac=true
 vendor.audio.compress_capture.enabled=true
-vendor.audio.enable.mirrorlink=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.gsl.shmem.dmaheap.uncached=true
 vendor.audio.hal.boot.timeout.ms=20000
@@ -115,7 +112,7 @@ vendor.audio.feature.usb_offload_burst_mode.enable=true
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false
 vendor.audio.feature.vbat.enable=true
 vendor.audio.feature.wsa.enable=false
-vendor.audio.feature.compr_voip.enable=true
+
 
 
 # Bluetooth
@@ -192,7 +189,7 @@ debug.sf.auto_latch_unsignaled=0
 debug.sf.disable_backpressure=0
 debug.sf.enable_hwc_vds=1
 debug.sf.enable_transaction_tracing=false
-debug.sf.predict_hwc_composition_strategy=0
+debug.sf.predict_hwc_composition_strategy=1
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.enable_gl_backpressure=0
 persist.sys.sf.color_mode=1
@@ -291,7 +288,7 @@ vendor.media.omx=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 vendor.mm.enable.qcom_parser=16711663
 persist.mm.enable.prefetch=true
-vendor.media.omx=0
+
 
 # Multi-gen LRU
 persist.device_config.mglru_native.lru_gen_config=all
@@ -345,3 +342,5 @@ ro.vendor.qti.cgroup_follow.enable=true
 persist.vendor.qti.inputopts.enable=true 
 persist.vendor.qti.inputopts.movetouchslop=0.6 
 ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+ro.minui.pixel_format=RGBX_8888
+ro.minui.drm_connector=DSI-1

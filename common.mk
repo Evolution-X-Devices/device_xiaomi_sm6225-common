@@ -146,15 +146,20 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
+    charger \
     charger_res_images \
     libsuspend
 
+# Charger images e fonts no vendor_ramdisk
+PRODUCT_COPY_FILES += \
+    system/core/healthd/images/battery_fail.png:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/res/images/charger/battery_fail.png \
+    system/core/healthd/images/battery_scale.png:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/res/images/charger/battery_scale.png \
+    bootable/recovery/fonts/12x22.png:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/res/fonts/12x22.png \
+    bootable/recovery/fonts/18x32.png:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/res/fonts/18x32.png
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    DSPVolumeSynchronizer
 
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -458,8 +463,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Device-specific settings
- PRODUCT_PACKAGES += \
-     XiaomiParts
+$(call inherit-product, hardware/dolby/dolby.mk)
+$(call inherit-product, packages/apps/FastCharge/fastcharge.mk)
+PRODUCT_PACKAGES += \
+    XiaomiParts \
+    DolbyAtmos
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -687,3 +695,4 @@ PRODUCT_PACKAGES += \
 
 # Remove LatinIME to avoid libjni_latinimegoogle conflict with GApps
 PRODUCT_PACKAGES := $(filter-out LatinIME, $(PRODUCT_PACKAGES))
+
