@@ -8,7 +8,8 @@ ro.infinity.camera=108MP, 8MP, 2MP, 16MP
 persist.sys.brightness.low.gamma=true
 
 # Camera
- persist.sys.cam.skip_detach_image=true
+persist.sys.cam.skip_detach_image=true
+persist.vendor.camera.preview.ubwc=0
 
 # Charger
 ro.charger.enable_suspend=1
