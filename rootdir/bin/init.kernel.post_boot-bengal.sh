@@ -204,9 +204,6 @@ echo $silver_early_upmigrate $gold_early_upmigrate > /proc/sys/walt/sched_early_
 # binder activity tasks
 echo 325 > /proc/sys/walt/walt_low_latency_task_threshold
 
-# Turn off scheduler boost at the end
-echo 0 > /proc/sys/walt/sched_boost
-
 # Reset the RT boost, which is 1024 (max) by default.
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
