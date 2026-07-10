@@ -181,6 +181,7 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 include device/qcom/sepolicy_vndr/sm6225/SEPolicy.mk
 include device/xiaomi/sepolicy/SEPolicy.mk
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include device/lineage/sepolicy/libion/sepolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
